@@ -376,9 +376,13 @@
             .closing { padding: 56px 24px 48px; }
             #audio-player { bottom: 16px; right: 16px; padding: 8px 14px 8px 8px; gap: 10px; }
         }
+
+        .overflowH {
+            overflow: hidden;
+        }
     </style>
 </head>
-<body>
+<body class="overflowH">
 
 <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
     <source src="https://cdn.pixabay.com/video/2022/08/01/126184-735726284_large.mp4" type="video/mp4">
@@ -672,6 +676,7 @@ document.querySelector('.unlock-btn').addEventListener('click', () => {
     document.getElementById('unlock-screen').classList.add('hidden');
     loadTrack(0);
     playerEl.classList.remove('hidden-player');
+    document.querySelector('body').classList.remove('overflowH');
     setTimeout(() => setPlaying(true), 600);
 });
 </script>
