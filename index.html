@@ -57,13 +57,15 @@
         .unlock-names em { font-style: normal; color: #363636; }
         .unlock-amp { display: block; font-size: .65em; color: #888; margin: 2px 0; }
         .unlock-btn {
-            border: 1px solid #363636; background: transparent; color: #363636;
+            border: 1px solid #363636; background: transparent; color: #fff;
             font-family: 'Raleway', sans-serif; font-size: 11px; font-weight: 400;
             letter-spacing: .35em; text-transform: uppercase;
             padding: 14px 44px; border-radius: 40px; cursor: pointer;
             transition: background .25s, color .25s, transform .2s; margin-top: 8px;
+            background: #363636;
+            animation: bounce2 2.5s ease-in-out infinite;
         }
-        .unlock-btn:hover { background: #363636; color: var(--white); transform: translateY(-2px); }
+        .unlock-btn:hover { background: #363636; color: var(--white); transform: translateY(-2px);opacity: .7; }
 
         .hero {
             min-height: 100svh; position: relative; overflow: hidden;
@@ -321,6 +323,12 @@
             0%, 100% { opacity: .4; transform: translateX(-50%) translateY(0); }
             50% { opacity: .9; transform: translateX(-50%) translateY(8px); }
         }
+
+        @keyframes bounce2 {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% {  transform: translateX(-50%) translateY(8px); }
+        }
+        
         .fade-in { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
 
@@ -398,7 +406,7 @@
         <span class="unlock-amp">&amp;</span>
         <em>Нилуфар</em>
     </div>
-    <button class="unlock-btn">Очиш</button>
+    <button class="unlock-btn">Мени босинг</button>
 </div>
 
 <div class="hero">
